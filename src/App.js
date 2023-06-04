@@ -2,6 +2,7 @@ import { VStack, Flex, Heading, Spacer } from "@chakra-ui/layout";
 import { IconButton } from "@chakra-ui/button";
 import { useColorMode } from "@chakra-ui/color-mode";
 import {FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin} from "react-icons/fa"
+import React, { useEffect } from "react";
 import Social from "./components/Social";
 import Profile from "./components/Profile";
 import Header from "./components/Header";
@@ -12,7 +13,12 @@ function App() {
   const {colorMode, toggleColorMode} = useColorMode();
   const isDark = colorMode === "dark";
 
+  useEffect(() => {
+    document.title = "Aqshal Website";
+  }, []);
+
   return (
+    
     <VStack p={5}>
       <Flex w="100%">
         <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">
