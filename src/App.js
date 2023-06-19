@@ -1,7 +1,15 @@
 import { VStack, Flex, Heading, Spacer } from "@chakra-ui/layout";
 import { IconButton } from "@chakra-ui/button";
 import { useColorMode } from "@chakra-ui/color-mode";
-import { FaSun, FaMoon, FaHome, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaSun,
+  FaMoon,
+  FaHome,
+  FaGithub,
+  FaLinkedin,
+  FaHtml5,
+} from "react-icons/fa";
+import { SiTailwindcss, SiJavascript } from "react-icons/si";
 import React, { useEffect } from "react";
 import {
   Image,
@@ -13,6 +21,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import ProfilePicture from "./assets/aqshal-pp.jpg";
+import Project1 from "./assets/project-1.png";
 import Social from "./components/Social";
 import Profile from "./components/Profile";
 import Header from "./components/Header";
@@ -23,10 +32,16 @@ function App() {
 
   return (
     <VStack p={5}>
-      <Flex w="100%" position="fixed" bgColor={isDark ? "#1a202c" : "white"} top={0} pt={2}
-          pb={2}>
+      <Flex
+        w="100%"
+        position="sticky"
+        bgColor={isDark ? "#1a202c" : "white"}
+        top={0}
+        pt={2}
+        pb={2}
+        zIndex={1}
+      >
         <IconButton
-        
           ml={4}
           icon={<FaHome />}
           isRound="true"
@@ -121,27 +136,38 @@ function App() {
             I am Muhammad Aqshal Prawira
           </Text>
           <Text fontSize={["sm", "md"]} mt={["5px", "10px"]}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-            aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-            mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-            semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
-            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-            nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
-            nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem
-            neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-            hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
-            Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
-            fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed
-            consequat, leo eget bibendum sodales, augue velit cursus nunc
+            I am a 7th-semester student at{" "}
+            <Text as="span" bgColor={isDark ? "green" : "lightgreen"}>
+              {" "}
+              UPN "VETERAN" JAKARTA,
+            </Text>{" "}
+            majoring in Information Systems. I have a strong interest in{" "}
+            <Text as="span" bgColor={isDark ? "grey" : "lightgrey"}>
+              front-end web development.
+            </Text>{" "}
+            Currently, I have been studying various programming languages
+            relevant to front-end web development, such as{" "}
+            <Text as="span" bgColor={"orange"}>
+              HTML,{" "}
+            </Text>
+            popular frameworks like{" "}
+            <Text as="span" bgColor={isDark ? "blue" : "lightblue"}>
+              Tailwind CSS
+            </Text>{" "}
+            and{" "}
+            <Text as="span" bgColor={isDark ? "blue" : "lightblue"}>
+              Chakra UI.
+            </Text>{" "}
+            Additionally, I have experience in using{" "}
+            <Text as="span" bgColor={isDark ? "orange" : "yellow"}>
+              JavaScript
+            </Text>{" "}
+            frameworks such as{" "}
+            <Text as="span" bgColor={isDark ? "blue" : "lightblue"}>
+              React JS.
+            </Text>{" "}
+            I am highly enthusiastic about further developing my skills in this
+            field and seeking more experiences in the IT industry.
           </Text>
           <IconButton
             mt={4}
@@ -190,6 +216,7 @@ function App() {
           My Projects
         </Text>
       </Flex>
+
       <Flex
         w="100%"
         mt={5}
@@ -200,20 +227,28 @@ function App() {
       >
         <Card maxW="sm" mt={5}>
           <CardBody>
-            <Image
-              src="https://dummyimage.com/334x223/000/fff"
-              alt="Dummy Image"
-              borderRadius="lg"
-            />
+            <Image src={Project1} alt="Dummy Image" borderRadius="lg" />
             <Stack mt="6" spacing="3">
-              <Heading size="md">Project 1</Heading>
+              <Heading size="md">RuangPerpus</Heading>
               <Text>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              </Text>
-              <Text color="blue.600" fontSize="2xl">
-                Lorem ipsum dolor sit amet
+                RuangPerpus adalah sebuah website perpustakaan yang menggunakan
+                fungsi Create, Read, Update, dan Delete (CRUD) untuk mengelola
+                buku.
               </Text>
             </Stack>
+            <Box mt={2}>
+              <IconButton icon={<FaHtml5 />} isRound="true"></IconButton>
+              <IconButton
+                icon={<SiTailwindcss />}
+                isRound="true"
+                ml={2}
+              ></IconButton>
+              <IconButton
+                icon={<SiJavascript />}
+                isRound="true"
+                ml={2}
+              ></IconButton>
+            </Box>
           </CardBody>
         </Card>
         <Card maxW="sm" mt={5}>
@@ -235,7 +270,10 @@ function App() {
           </CardBody>
         </Card>
       </Flex>
-      <Box mt={10} fontWeight="bold"> Ntar dilanjutin mau bobo dulu &#x1F634;</Box>
+      <Box mt={10} fontWeight="bold">
+        {" "}
+        Ntar dilanjutin mau bobo dulu &#x1F634;
+      </Box>
     </VStack>
   );
 }
