@@ -96,7 +96,7 @@ function App() {
         >
           My Projects
         </Button>
-
+          <Spacer />
         <IconButton
           ml={5}
           icon={isDark ? <FaSun /> : <FaMoon />}
