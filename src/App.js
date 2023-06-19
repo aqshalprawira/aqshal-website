@@ -151,19 +151,19 @@ function App() {
               HTML,{" "}
             </Text>
             popular frameworks like{" "}
-            <Text as="span" bgColor={isDark ? "blue" : "lightblue"}>
+            <Text as="span" bgColor={"#319795"}>
               Tailwind CSS
             </Text>{" "}
             and{" "}
-            <Text as="span" bgColor={isDark ? "blue" : "lightblue"}>
+            <Text as="span" bgColor={"#319795"}>
               Chakra UI.
             </Text>{" "}
             Additionally, I have experience in using{" "}
-            <Text as="span" bgColor={isDark ? "orange" : "yellow"}>
+            <Text as="span" bgColor={"#E4D04B"}>
               JavaScript
             </Text>{" "}
             frameworks such as{" "}
-            <Text as="span" bgColor={isDark ? "blue" : "lightblue"}>
+            <Text as="span" bgColor={"#149ECA"}>
               React JS.
             </Text>{" "}
             I am highly enthusiastic about further developing my skills in this
@@ -231,9 +231,7 @@ function App() {
             <Stack mt="6" spacing="3">
               <Heading size="md">RuangPerpus</Heading>
               <Text>
-                RuangPerpus adalah sebuah website perpustakaan yang menggunakan
-                fungsi Create, Read, Update, dan Delete (CRUD) untuk mengelola
-                buku.
+              RuangPerpus is a library website that utilizes the Create, Read, Update, and Delete (CRUD) functions to manage books
               </Text>
             </Stack>
             <Box mt={2}>
