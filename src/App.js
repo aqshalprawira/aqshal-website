@@ -9,7 +9,13 @@ import {
   FaLinkedin,
   FaHtml5,
 } from "react-icons/fa";
-import { SiTailwindcss, SiJavascript } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiJavascript,
+  SiChakraui,
+  SiCss3,
+} from "react-icons/si";
+import { GrReactjs } from "react-icons/gr";
 import React, { useEffect } from "react";
 import {
   Image,
@@ -22,7 +28,8 @@ import {
 } from "@chakra-ui/react";
 import ProfilePicture from "./assets/aqshal-pp.jpg";
 import Project1 from "./assets/project-1.png";
-import Social from "./components/Social";
+import Project2 from "./assets/project-2.png";
+import Project3 from "./assets/project-3.png";
 import Profile from "./components/Profile";
 import Header from "./components/Header";
 
@@ -96,7 +103,7 @@ function App() {
         >
           My Projects
         </Button>
-          <Spacer />
+        <Spacer />
         <IconButton
           ml={5}
           icon={isDark ? <FaSun /> : <FaMoon />}
@@ -231,7 +238,8 @@ function App() {
             <Stack mt="6" spacing="3">
               <Heading size="md">RuangPerpus</Heading>
               <Text>
-              RuangPerpus is a library website that utilizes the Create, Read, Update, and Delete (CRUD) functions to manage books
+                RuangPerpus is a library website that utilizes the Create, Read,
+                Update, and Delete (CRUD) functions to manage books
               </Text>
             </Stack>
             <Box mt={2}>
@@ -249,29 +257,51 @@ function App() {
             </Box>
           </CardBody>
         </Card>
+
         <Card maxW="sm" mt={5}>
           <CardBody>
-            <Image
-              src="https://dummyimage.com/334x223/000/fff"
-              alt="Dummy Image"
-              borderRadius="lg"
-            />
+            <Image src={Project2} alt="Student Portal" borderRadius="lg" />
             <Stack mt="6" spacing="3">
-              <Heading size="md">Project 2</Heading>
+              <Heading size="md">Student Portal</Heading>
               <Text>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              </Text>
-              <Text color="blue.600" fontSize="2xl">
-                Lorem ipsum dolor sit amet
+                Student Portal is a website with Create, Read, Update, and
+                Delete (CRUD) functionality specifically designed to manage and
+                organize student data.
               </Text>
             </Stack>
+            <Box mt={2}>
+              <IconButton icon={<FaHtml5 />} isRound="true"></IconButton>
+              <IconButton
+                icon={<SiChakraui />}
+                isRound="true"
+                ml={2}
+              ></IconButton>
+              <IconButton
+                icon={<GrReactjs />}
+                isRound="true"
+                ml={2}
+              ></IconButton>
+            </Box>
+          </CardBody>
+        </Card>
+
+        <Card maxW="sm" mt={5}>
+          <CardBody>
+            <Image src={Project3} alt="Personal Website" borderRadius="lg" />
+            <Stack mt="6" spacing="3">
+              <Heading size="md">MeMasak</Heading>
+              <Text>
+                MeMasak is a website that provides a wide range of food recipes
+                for users to learn and explore their culinary skills.
+              </Text>
+            </Stack>
+            <Box mt={2}>
+              <IconButton icon={<FaHtml5 />} isRound="true"></IconButton>
+              <IconButton icon={<SiCss3 />} isRound="true" ml={2}></IconButton>
+            </Box>
           </CardBody>
         </Card>
       </Flex>
-      <Box mt={10} fontWeight="bold">
-        {" "}
-        Ntar dilanjutin mau bobo dulu &#x1F634;
-      </Box>
     </VStack>
   );
 }
