@@ -85,7 +85,7 @@ function App() {
         >
           About Me
         </Button>
-
+          
         <Button
           _hover={{
             transform: "scale(1.2)",
@@ -119,13 +119,25 @@ function App() {
           size={["sm", "md"]}
         ></IconButton>
       </Flex>
+
+      <Flex
+        w="100%"
+        mt={10}
+        direction={["column", "row"]}
+        justifyContent={["center", "space-evenly"]}
+        alignItems={["center", "flex-start"]}
+      >
+        <Text fontSize={["xl", "4xl"]} fontWeight="bold" id="aboutme">
+          About Me
+        </Text>
+      </Flex>
+
       <Flex
         w="100%"
         mt={10}
         direction={["column", "row"]}
         justifyContent={["center", "flex-start"]}
         alignItems={["center", "flex-start"]}
-        id="aboutme"
       >
         <Image
           borderRadius="full"
@@ -134,6 +146,7 @@ function App() {
           boxSize={["150px", "300px"]}
           mr={["10px", "20px"]}
         />
+
 
         <Box mt={5}>
           <Text fontSize={["md", "2xl"]} fontWeight="bold">
@@ -144,33 +157,33 @@ function App() {
           </Text>
           <Text fontSize={["sm", "md"]} mt={["5px", "10px"]}>
             I am a 7th-semester student at{" "}
-            <Text as="span" bgColor={isDark ? "green" : "lightgreen"}>
+            <Text as="strong">
               {" "}
               UPN "VETERAN" JAKARTA,
             </Text>{" "}
             majoring in Information Systems. I have a strong interest in{" "}
-            <Text as="span" bgColor={isDark ? "grey" : "lightgrey"}>
+            <Text as="strong">
               front-end web development.
             </Text>{" "}
             Currently, I have been studying various programming languages
             relevant to front-end web development, such as{" "}
-            <Text as="span" bgColor={"orange"}>
+            <Text as="strong">
               HTML,{" "}
             </Text>
             popular frameworks like{" "}
-            <Text as="span" bgColor={"#319795"}>
+            <Text as="strong" >
               Tailwind CSS
             </Text>{" "}
             and{" "}
-            <Text as="span" bgColor={"#319795"}>
+            <Text as="strong">
               Chakra UI.
             </Text>{" "}
             Additionally, I have experience in using{" "}
-            <Text as="span" bgColor={"#E4D04B"}>
+            <Text as="strong">
               JavaScript
             </Text>{" "}
             frameworks such as{" "}
-            <Text as="span" bgColor={"#149ECA"}>
+            <Text as="strong">
               React JS.
             </Text>{" "}
             I am highly enthusiastic about further developing my skills in this
@@ -212,6 +225,9 @@ function App() {
           ></IconButton>
         </Box>
       </Flex>
+        
+      
+            
       <Flex
         w="100%"
         mt={5}
