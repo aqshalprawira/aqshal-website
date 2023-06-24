@@ -16,7 +16,7 @@ import {
   SiCss3,
 } from "react-icons/si";
 import { GrReactjs } from "react-icons/gr";
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Image,
   Text,
@@ -30,8 +30,7 @@ import ProfilePicture from "./assets/aqshal-pp.jpg";
 import Project1 from "./assets/project-1.png";
 import Project2 from "./assets/project-2.png";
 import Project3 from "./assets/project-3.png";
-import Profile from "./components/Profile";
-import Header from "./components/Header";
+
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -122,7 +121,7 @@ function App() {
 
       <Flex
         w="100%"
-        mt={10}
+        mt={8}
         direction={["column", "row"]}
         justifyContent={["center", "space-evenly"]}
         alignItems={["center", "flex-start"]}
@@ -154,6 +153,7 @@ function App() {
           </Text>
           <Text fontSize={["md", "2xl"]} fontWeight="bold">
             I am Muhammad Aqshal Prawira
+            
           </Text>
           <Text fontSize={["sm", "md"]} mt={["5px", "10px"]}>
             I am a 7th-semester student at{" "}
@@ -195,7 +195,7 @@ function App() {
             isRound="true"
             onClick={(e) => {
               e.preventDefault();
-              window.location.href = "https://github.com/aqshalprawira";
+              window.open("https://github.com/aqshalprawira", "_blank");
             }}
             _hover={{
               transform: "scale(1.5)",
@@ -212,8 +212,7 @@ function App() {
             isRound="true"
             onClick={(e) => {
               e.preventDefault();
-              window.location.href =
-                "https://www.linkedin.com/in/aqshalprawira/";
+              window.open("https://www.linkedin.com/in/aqshalprawira/","_blank");
             }}
             _hover={{
               transform: "scale(1.5)",
