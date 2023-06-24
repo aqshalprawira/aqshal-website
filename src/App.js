@@ -30,6 +30,9 @@ import ProfilePicture from "./assets/aqshal-pp.jpg";
 import Project1 from "./assets/project-1.png";
 import Project2 from "./assets/project-2.png";
 import Project3 from "./assets/project-3.png";
+import Typed from 'react-typed';
+import Fade from 'react-reveal/Fade';
+
 
 
 function App() {
@@ -146,15 +149,21 @@ function App() {
           mr={["10px", "20px"]}
         />
 
-
         <Box mt={5}>
           <Text fontSize={["md", "2xl"]} fontWeight="bold">
             Hello There &#x1F44B;
           </Text>
-          <Text fontSize={["md", "2xl"]} fontWeight="bold">
-            I am Muhammad Aqshal Prawira
-            
-          </Text>
+          <Box as="p" fontSize={["md", "2xl"]} fontWeight="bold">
+          <Typed 
+            strings={[
+              "My Name is Muhammad Aqshfj",
+              "My Name is Muhammad Aqshal Prawira",
+            ]}
+            typeSpeed={100}
+            backSpeed={100}
+            loop 
+          />
+          </Box>
           <Text fontSize={["sm", "md"]} mt={["5px", "10px"]}>
             I am a 7th-semester student at{" "}
             <Text as="strong">
@@ -224,7 +233,6 @@ function App() {
           ></IconButton>
         </Box>
       </Flex>
-        
       
             
       <Flex
@@ -239,6 +247,7 @@ function App() {
         </Text>
       </Flex>
 
+      <Fade top delay={1500}>
       <Flex
         w="100%"
         mt={5}
@@ -246,6 +255,7 @@ function App() {
         justifyContent={["center", "space-evenly"]}
         alignItems={["center", "flex-start"]}
         id="myprojects"
+        gap={6}
       >
         <Card maxW="sm" mt={5}>
           <CardBody>
@@ -317,6 +327,7 @@ function App() {
           </CardBody>
         </Card>
       </Flex>
+      </Fade>
     </VStack>
   );
 }
