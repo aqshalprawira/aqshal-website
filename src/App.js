@@ -64,7 +64,7 @@ function App() {
           isRound="true"
           onClick={(e) => {
             e.preventDefault();
-            window.location.href = "https://axal.my.id";
+            window.location.href = "https://aqshaldev.my.id";
           }}
           _hover={{
             transform: "scale(1.5)",
