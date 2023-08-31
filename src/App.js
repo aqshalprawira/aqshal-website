@@ -14,6 +14,7 @@ import {
   SiJavascript,
   SiChakraui,
   SiCss3,
+  SiBootstrap
 } from "react-icons/si";
 import { GrReactjs } from "react-icons/gr";
 import React from "react";
@@ -40,6 +41,7 @@ import gitLogo from "../src/assets/gitLogo.png";
 import htmlLogo from "../src/assets/htmlLogo.png";
 import jsLogo from "../src/assets/jsLogo.png";
 import tailwindLogo from "../src/assets/tailwindLogo.svg";
+import bootstrapLogo from "../src/assets/Bootstrap_logo.png";
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -280,7 +282,18 @@ function App() {
           id="myprojects"
           gap={6}
         >
-          <Card maxW="sm" mt={5}>
+          <Card border='2px' borderColor='lightblue' maxW="sm" mt={5} onClick={(e) => {
+              e.preventDefault();
+              window.open("https://ruang-perpus-aqshal.netlify.app/", "_blank");
+            }}
+            _hover={{
+              transform: "scale(1.1)",
+              opacity: 1,
+              color: isDark ? "white" : "black",
+              transition: "transform ease 0.3s",
+              cursor: "pointer"
+            }}>
+          
             <CardBody>
               <Image src={Project1} alt="Dummy Image" borderRadius="lg" />
               <Stack mt="6" spacing="3">
@@ -306,7 +319,18 @@ function App() {
             </CardBody>
           </Card>
 
-          <Card maxW="sm" mt={5}>
+          <Card border='2px' borderColor='lightblue' maxW="sm" mt={5} onClick={(e) => {
+              e.preventDefault();
+              window.open("https://final-project-2e2c0.web.app/", "_blank");
+            }}
+            _hover={{
+              transform: "scale(1.1)",
+              opacity: 1,
+              color: isDark ? "white" : "black",
+              transition: "transform ease 0.3s",
+              cursor: "pointer"
+            }}
+            >
             <CardBody>
               <Image src={Project2} alt="Student Portal" borderRadius="lg" />
               <Stack mt="6" spacing="3">
@@ -333,7 +357,17 @@ function App() {
             </CardBody>
           </Card>
 
-          <Card maxW="sm" mt={5}>
+          <Card border='2px' borderColor='lightblue' maxW="sm" mt={5} onClick={(e) => {
+              e.preventDefault();
+              window.open("https://memasak.netlify.app/", "_blank");
+            }}
+            _hover={{
+              transform: "scale(1.1)",
+              opacity: 1,
+              color: isDark ? "white" : "black",
+              transition: "transform ease 0.3s",
+              cursor: "pointer"
+            }} >
             <CardBody>
               <Image src={Project3} alt="Personal Website" borderRadius="lg" />
               <Stack mt="6" spacing="3">
@@ -347,6 +381,11 @@ function App() {
                 <IconButton icon={<FaHtml5 />} isRound="true"></IconButton>
                 <IconButton
                   icon={<SiCss3 />}
+                  isRound="true"
+                  ml={2}
+                ></IconButton>
+                <IconButton
+                  icon={<SiBootstrap />}
                   isRound="true"
                   ml={2}
                 ></IconButton>
@@ -431,7 +470,7 @@ function App() {
               opacity={0.5}
             >
               {" "}
-              <Image src={gitLogo} />{" "}
+              <Image boxSize="48px" src={bootstrapLogo} />{" "}
             </WrapItem>
           </Wrap>
         </Flex>
