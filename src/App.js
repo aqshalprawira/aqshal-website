@@ -359,18 +359,42 @@ function App() {
                   and organize student data.
                 </Text>
               </Stack>
-              <Box mt={2}>
-                <IconButton icon={<FaHtml5 />} isRound="true"></IconButton>
+              <Box mt={2} onClick={(e) => {
+              e.preventDefault();
+              window.open("https://final-project-2e2c0.firebaseapp.com/", "_blank");
+            }}>
+                <IconButton icon={<FaHtml5 />} isRound="true" mb={2}></IconButton>
                 <IconButton
                   icon={<SiChakraui />}
                   isRound="true"
                   ml={2}
+                  mb={2}
                 ></IconButton>
                 <IconButton
                   icon={<GrReactjs />}
                   isRound="true"
                   ml={2}
+                  mb={2}
+                  mr={2}
                 ></IconButton>
+                     <Button
+          leftIcon={<FaGithub />}
+          _hover={{
+            transform: "scale(1.2)",
+            opacity: 1,
+            color: isDark ? "cyan" : "darkblue",
+          }}
+          
+          mb={2}
+          opacity={0.5}
+          size={["sm", "md"]}
+          onClick={(e) => {
+            e.preventDefault();
+              window.open("https://github.com/aqshalprawira/student-portal", "_blank");
+          }}
+        >
+          Source Code
+        </Button>
               </Box>
             </CardBody>
           </Card>
@@ -420,7 +444,7 @@ function App() {
           
           mb={2}
           opacity={0.5}
-          size={["sm", "sm"]}
+          size={["sm", "md"]}
           onClick={(e) => {
             e.preventDefault();
               window.open("https://github.com/aqshalprawira/MeMasak", "_blank");
