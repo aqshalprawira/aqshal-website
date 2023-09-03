@@ -14,7 +14,8 @@ import {
   SiJavascript,
   SiChakraui,
   SiCss3,
-  SiBootstrap
+  SiBootstrap,
+  SiGmail
 } from "react-icons/si";
 import { GrReactjs } from "react-icons/gr";
 import React from "react";
@@ -37,7 +38,6 @@ import Typed from "react-typed";
 import Fade from "react-reveal/Fade";
 import reactLogo from "../src/assets/reactLogo.png";
 import cssLogo from "../src/assets/cssLogo.png";
-import gitLogo from "../src/assets/gitLogo.png";
 import htmlLogo from "../src/assets/htmlLogo.png";
 import jsLogo from "../src/assets/jsLogo.png";
 import tailwindLogo from "../src/assets/tailwindLogo.svg";
@@ -257,6 +257,24 @@ function App() {
             transition="transform 0.3s"
             opacity={0.5}
           ></IconButton>
+          <Button
+          leftIcon={<SiGmail />}
+          _hover={{
+            transform: "scale(1.2)",
+            opacity: 1,
+            color: "tomato",
+          }}
+          mt={4}
+          ml={3}
+          opacity={0.5}
+          size={["sm", "sm"]}
+          onClick={(e) => {
+            e.preventDefault();
+              window.open("https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=aqshal.map@gmail.com", "_blank");
+          }}
+        >
+          Contact Me!
+        </Button>
         </Box>
       </Flex>
 
@@ -378,17 +396,38 @@ function App() {
                 </Text>
               </Stack>
               <Box mt={2}>
-                <IconButton icon={<FaHtml5 />} isRound="true"></IconButton>
+                <IconButton icon={<FaHtml5 />} isRound="true" mb={2}></IconButton>
                 <IconButton
                   icon={<SiCss3 />}
                   isRound="true"
                   ml={2}
+                  mb={2}
                 ></IconButton>
                 <IconButton
                   icon={<SiBootstrap />}
                   isRound="true"
                   ml={2}
+                  mb={2}
+                  mr={2}
                 ></IconButton>
+                <Button
+          leftIcon={<FaGithub />}
+          _hover={{
+            transform: "scale(1.2)",
+            opacity: 1,
+            color: isDark ? "cyan" : "darkblue",
+          }}
+          
+          mb={2}
+          opacity={0.5}
+          size={["sm", "sm"]}
+          onClick={(e) => {
+            e.preventDefault();
+              window.open("https://github.com/aqshalprawira/MeMasak", "_blank");
+          }}
+        >
+          Source Code
+        </Button>
               </Box>
             </CardBody>
           </Card>
@@ -475,7 +514,13 @@ function App() {
           </Wrap>
         </Flex>
       </Fade>
+      {/* Footer */}
+      <Flex w="100%" justifyContent={"center"} mt={5}>
+        <Box>© 2023 | Muhammad Aqshal Prawira</Box>
+      </Flex>
+
     </VStack>
+
   );
 }
 
