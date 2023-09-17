@@ -9,7 +9,7 @@ import ProfilePicture from "./assets/aqshal-pp.jpg";
 import Typed from "react-typed";
 
 export default function Profile() {
-  const { colorMode} = useColorMode();
+  const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
   return (
     <>
@@ -34,6 +34,7 @@ export default function Profile() {
       >
         <Image
           borderRadius="full"
+          boxShadow="dark-lg"
           src={ProfilePicture}
           alt="Aqshal PP"
           boxSize={["150px", "300px"]}
@@ -88,6 +89,7 @@ export default function Profile() {
           </Text>
           <IconButton
             mt={4}
+            boxShadow="lg"
             icon={<FaGithub />}
             isRound="true"
             onClick={(e) => {
@@ -105,6 +107,7 @@ export default function Profile() {
           <IconButton
             mt={4}
             ml={4}
+            boxShadow="lg"
             icon={<FaLinkedin />}
             isRound="true"
             onClick={(e) => {
@@ -123,6 +126,7 @@ export default function Profile() {
             opacity={0.5}
           ></IconButton>
           <Button
+          boxShadow="lg"
             leftIcon={<SiGmail />}
             _hover={{
               transform: "scale(1.2)",
@@ -144,6 +148,7 @@ export default function Profile() {
             Contact Me!
           </Button>
           <Button
+          boxShadow="lg"
             leftIcon={<FaFileDownload />}
             _hover={{
               transform: "scale(1.2)",

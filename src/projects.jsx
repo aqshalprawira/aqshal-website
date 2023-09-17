@@ -53,8 +53,7 @@ export default function Projects() {
           gap={6}
         >
           <Card
-            border="2px"
-            borderColor="lightblue"
+          boxShadow="lg"
             maxW="sm"
             mt={5}
             onClick={(e) => {
@@ -64,9 +63,10 @@ export default function Projects() {
             _hover={{
               transform: "scale(1.1)",
               opacity: 1,
-              color: isDark ? "white" : "black",
               transition: "transform ease 0.3s",
               cursor: "pointer",
+              border: "2px",
+              borderColor: "lightblue"
             }}
           >
             <CardBody>
@@ -95,8 +95,7 @@ export default function Projects() {
           </Card>
 
           <Card
-            border="2px"
-            borderColor="lightblue"
+          boxShadow="lg"
             maxW="sm"
             mt={5}
             onClick={(e) => {
@@ -106,7 +105,8 @@ export default function Projects() {
             _hover={{
               transform: "scale(1.1)",
               opacity: 1,
-              color: isDark ? "white" : "black",
+              border: "2px",
+              borderColor: "lightblue",
               transition: "transform ease 0.3s",
               cursor: "pointer",
             }}
@@ -174,8 +174,7 @@ export default function Projects() {
           </Card>
 
           <Card
-            border="2px"
-            borderColor="lightblue"
+          boxShadow="lg"
             maxW="sm"
             mt={5}
             onClick={(e) => {
@@ -185,7 +184,8 @@ export default function Projects() {
             _hover={{
               transform: "scale(1.1)",
               opacity: 1,
-              color: isDark ? "white" : "black",
+              border: "2px",
+              borderColor: "lightblue",
               transition: "transform ease 0.3s",
               cursor: "pointer",
             }}

@@ -26,7 +26,7 @@ export default function Skills() {
           <Text fontSize={["xl", "4xl"]} fontWeight="bold">
             Skills
           </Text>
-          <Wrap w={["75%", "100%"]} >
+          <Wrap w={["75%", "100%"]} cursor="pointer">
             <WrapItem
               _hover={{
                 transform: "scale(1.2)",

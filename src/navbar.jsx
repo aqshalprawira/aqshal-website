@@ -19,11 +19,13 @@ export default function Navbar() {
         pb={2}
         px={2}
         zIndex={1}
+        boxShadow="lg"
       >
         <IconButton
           ml={4}
           icon={<FaHome />}
           isRound="true"
+          boxShadow="lg"
           onClick={(e) => {
             e.preventDefault();
             window.location.href = "https://aqshaldev.my.id";
@@ -54,6 +56,7 @@ export default function Navbar() {
             e.preventDefault();
             window.location.href = "#aboutme";
           }}
+          boxShadow="lg"
         >
           About Me
         </Button>
@@ -72,6 +75,7 @@ export default function Navbar() {
             e.preventDefault();
             window.location.href = "#myprojects";
           }}
+          boxShadow="lg"
         >
           My Projects
         </Button>
@@ -90,12 +94,14 @@ export default function Navbar() {
             e.preventDefault();
             window.location.href = "#skills";
           }}
+          boxShadow="lg"
         >
           Skills
         </Button>
         <Spacer />
         <IconButton
           ml={4}
+          boxShadow="lg"
           icon={isDark ? <FaSun /> : <FaMoon />}
           isRound="true"
           onClick={toggleColorMode}

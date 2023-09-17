@@ -7,13 +7,15 @@ import Footer from "./footer";
 
 function App() {
   return (
+    <>
+    <Navbar />
     <VStack p={5}>
-      <Navbar />
       <Profile />
       <Projects />
       <Skills />
       <Footer />
     </VStack>
+    </>
   );
 }
 
